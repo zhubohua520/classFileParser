@@ -1,0 +1,14 @@
+//
+// Created by zbh on 2021/6/8.
+//
+
+#ifndef CLASSFILEPARSER_ATTRIBUTEINFO_H
+#define CLASSFILEPARSER_ATTRIBUTEINFO_H
+
+
+class AttributeInfo {
+
+};
+
+
+#endif //CLASSFILEPARSER_ATTRIBUTEINFO_H

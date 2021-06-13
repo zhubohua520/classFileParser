@@ -1,0 +1,14 @@
+//
+// Created by zbh on 2021/6/8.
+//
+
+#ifndef CLASSFILEPARSER_INTERFACEINFO_H
+#define CLASSFILEPARSER_INTERFACEINFO_H
+
+
+class InterfaceInfo {
+
+};
+
+
+#endif //CLASSFILEPARSER_INTERFACEINFO_H
