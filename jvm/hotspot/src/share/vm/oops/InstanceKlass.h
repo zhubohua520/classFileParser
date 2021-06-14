@@ -27,25 +27,25 @@ private:
 
     unsigned short *constant_pool_count;
 
-    ConstantPool constant_pool;  //size:constantPoolCount-1
+    ConstantPool *constant_pool;  //size:constantPoolCount-1
 
-    unsigned short access_flags; //u2
+    unsigned short *access_flags; //u2
 
-    unsigned short this_class; //u2
+    unsigned short *this_class; //u2
 
-    unsigned short super_class; //u2
+    unsigned short *super_class; //u2
 
-    unsigned short interfaces_count; //u2
+    unsigned short *interfaces_count; //u2
 
     InterfaceInfo interfaces; //u2 结构是Constant_class_info
 
-    unsigned short fields_count; //u2
+    unsigned short *fields_count; //u2
 
-    FieldInfo fields;
+    FieldInfo *fields;
 
-    unsigned short method_count; //u2
+    unsigned short *method_count; //u2
 
-    Method methods;
+    char **methods;
 
     unsigned short attributes_count; //u2
 
@@ -66,6 +66,43 @@ public:
     void setConstantPoolCount(const char *c);
 
     unsigned short getConstantPoolCount();
+
+    void setConstantPool(ConstantPool *constant_pool);
+
+    ConstantPool *getConstantPool();
+
+    void setAccessFlags(const char *c);
+
+    unsigned short getAccessFlags();
+
+    void setThisClass(const char *thisClass);
+
+    unsigned short getThisClass();
+
+    unsigned short getSuperClass();
+
+    void setSuperClass(const char *c);
+
+    unsigned short getInterfacesCount();
+
+    void setInterfacesCount(const char *c);
+
+    unsigned short getFieldsCount();
+
+    void setFieldsCount(const char *c);
+
+    unsigned short getMethodCount();
+
+    void setMethodCount(const char *c);
+
+    unsigned short getAttributesCount() const;
+
+    void setAttributesCount(unsigned short attributesCount);
+
+    char **getMethods() const;
+
+    void setMethods(char **methods);
+
 };
 
 

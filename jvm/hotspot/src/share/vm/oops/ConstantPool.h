@@ -37,12 +37,34 @@ public:
     ConstantPool(int capacity);
 
 public:
-    void setTag(int key, unsigned char *p_tag);
+    void setTag(int key, int *p_tag);
+
+    void put(int index, char **p);
+
+    char **get(int index);
+
+    unsigned short *getClassIndex(int index);
+
+    unsigned short *getNameAndTypeIndex(int index);
+
+    unsigned short *getStringIndex(int index);
+
+    unsigned short *getClassInfoIndex(int index);
+
+    unsigned short *getNameIndex(int index);
+
+    unsigned short *getDescriptorIndex(int index);
+
+    char *getUtf8Info(int index);
 
 private:
-    unsigned short *p_key;
-    unsigned long *p_value;
-    unsigned char *p_tag;
+    char **p_key;
+//    unsigned long *p_value;
+    int *p_tag;
+
+    unsigned short *getShort(int index);
+
+    unsigned short *getNextShort(int index);
 
 };
 

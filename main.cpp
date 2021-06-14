@@ -14,9 +14,19 @@ int main() {
 //    printf("%d\n", sizeof(c));
 //    printf("%d\n", sizeof(&c));
 
+    long l = 2;
+    long *p_l = &l;
+    char c = 10;
+    char *p_c = &c;
+
     char *path = "com.zbh.jvm.example.HelloWorld";
 
-    BootClassLoader::loadClass(path);
+    try {
+        BootClassLoader::loadClass(path);
+    } catch (const std::exception &e){
+        cout << e.what() << endl;
+    }
+
 
 
 
